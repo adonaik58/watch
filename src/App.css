@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.content {
+  color: #fff6;
+  height: 100dvh;
+  background: black;
+  display: flex;
+  align-items: center;
+  font-family: "Questrial", calibri;
+  .container {
+    /* border: 1px solid red; */
+    width: max-content;
+    margin: auto;
+    position: relative;
+
+    h3 {
+      font-size: 80px;
+    }
+    .shadow {
+      position: absolute;
+      /* border: 1px solid red; */
+      box-shadow: 1px 1px 892px 176px #fff2;
+      width: 1px;
+      height: 1px;
+      left: 50%;
+      top: 50%;
+    }
+    h1 {
+      font-size: 600px;
+    }
+    p {
+      position: absolute;
+      font-size: 80px;
+      bottom: 40px;
+      right: 0;
+    }
+  }
+}
