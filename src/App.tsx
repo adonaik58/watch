@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
+  const hour = String(new Date().getHours() < 10 ? "0" + new Date().getHours() : new Date().getHours());
+  const minute = String(new Date().getMinutes() < 10 ? "0" + new Date().getMinutes() : new Date().getMinutes());
+  const second = String(new Date().getSeconds() < 10 ? "0" + new Date().getSeconds() : new Date().getSeconds());
   const date = () =>
     String(
       new Date(new Date().toDateString())
@@ -12,7 +15,7 @@ function App() {
           day: "numeric",
           // timeStyle: "full",
         })
-        .concat(", ", String(new Date().getHours()), ":", String(new Date().getMinutes()), ", ", String(new Date().getSeconds() < 10 ? "0" + new Date().getSeconds() : new Date().getSeconds()))
+        .concat(", ", hour, ":", minute, ", ", second)
     );
   const [dateTime, setDateTime] = useState(date);
   useEffect(() => {
